@@ -1,41 +1,45 @@
-## git log --oneline
+git log --oneline
 ->コミットメッセージの最初の１行だけ表示
   コミット名は省略形
 　要点だけ表示したいときに使用する
 
-## git log -p
+git log -p
 ## git log -p ファイル名
 ->ファイルの変更差分または、指定したファイルの変更差分を表示する
 
-## git log -n コミット数
+git log -n コミット数
 ->表示するコミット数を制限する
   最近の変更履歴だけ見たい時に使う
   例： git log -n 3 もしくは git log -3 でも同じ挙動
 
-## git log --pretty=short
+git log --pretty=short
 ->コミット、著者、タイトルを表示
 　日付は表示されない
 
-## git log --pretty=full
+git log --pretty=full
 ->コミット、著者、タイトル、コミッタを表示
 　日付は表示されない
 
-## git log --graph
+git log --graph
 ->コミット履歴をグラフで表示する
 　コミットの流れを把握できる
 
-## git log　--abbrev-commit
+git log　--abbrev-commit
 ->コミット名(40文字程度)をを短縮形にする
 
-## git log --name-status
+git log --name-status
 ->変更・追加したファイル名を表示
 　A : addのこと、ファイルが追加された場合に表示される
 　M : modifyのこと、ファイルに変更があった場合に表示される
 　D : deleteのこと、ファイルが削除された場合に表示される
 
-## git log --author=ユーザー名
+git log --author=ユーザー名
 ->コミットしたユーザーを絞って検索
+
+git shortlog
+->作成者別に各コミットを分類し、各コミットメッセージの最初の行を表示
+  誰がどんな作業をしているかについて確認する簡単な方法
 
 
 個人的に見やすいgit logカスタマイズ
-## git log --pretty=format:'[%ad %Cgreen%ar%Creset] %C(yellow)%h%Creset %s %C(bold cyan)<%an>%Creset' --date=format:'%Y-%m-%d %H:%M' --graph
+git log --pretty=format:'[%ad %Cgreen%ar%Creset] %C(yellow)%h%Creset %s %C(bold cyan)<%an>%Creset' --date=format:'%Y-%m-%d %H:%M' --graph
