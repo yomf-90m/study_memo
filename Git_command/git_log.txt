@@ -12,14 +12,6 @@ git log -n コミット数
   最近の変更履歴だけ見たい時に使う
   例： git log -n 3 もしくは git log -3 でも同じ挙動
 
-git log --pretty=short
-->コミット、著者、タイトルを表示
-　日付は表示されない
-
-git log --pretty=full
-->コミット、著者、タイトル、コミッタを表示
-　日付は表示されない
-
 git log --graph
 ->コミット履歴をグラフで表示する
 　コミットの流れを把握できる
@@ -39,6 +31,58 @@ git log --author=ユーザー名
 git shortlog
 ->作成者別に各コミットを分類し、各コミットメッセージの最初の行を表示
   誰がどんな作業をしているかについて確認する簡単な方法
+
+git log --pretty=short
+->コミット、著者、タイトルを表示
+　日付は表示されない
+
+git log --pretty=full
+->コミット、著者、タイトル、コミッタを表示
+　日付は表示されない
+
+git log --pretty:fomat:
+->独自フォーマットを設定する
+
+
+fomatで使用できるプレスフォルダー
+
+%H	コミットのハッシュ
+%h	コミットのハッシュ(短縮系)
+%an	authorの名前
+%ae	authorのメールアドレス
+%ad	authorの日付(--date= オプションに従った形式)
+%ar	authorの相対日付
+%cn	committerの名前
+%ce	committerのメールアドレス
+%cd	committerの日付(--date= オプションに従った形式)
+%cr	committerの相対日付
+%s	コミットメッセージ
+%d	ブランチやタグの名前
+%Cred	文字を赤くする
+%Cgreen	文字を緑色にする
+%Cblue	文字を青くする
+%Creset	文字の色を戻す
+%C(auto)	文字の色をgitが用意している色にする
+%C( )	色、属性の指定
+
+色
+normal
+black
+red
+green
+yellow
+blue
+magent
+cyan
+white
+#ff0ab3のような8bitカラー
+
+属性
+bold:太字
+dim:減光
+ul:アンダーライン
+blink:点滅
+
 
 
 個人的に見やすいgit logカスタマイズ
