@@ -16,12 +16,12 @@ git log -n コミット数
   最近の変更履歴だけ見たい時に使う
   例： git log -n 3 もしくは git log -3 でも同じ挙動
 
+git log --reverse
+->コミットを古い順から表示する
+
 git log --graph
 ->コミット履歴をグラフで表示する
 　コミットの流れを把握できる
-
-git log　--abbrev-commit
-->コミット名(40文字程度)をを短縮形にする
 
 git log --name-status
 ->変更・追加したファイル名を表示
