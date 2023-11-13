@@ -44,11 +44,11 @@ git log --pretty=full
 ->コミット、著者、タイトル、コミッタを表示
 　日付は表示されない
 
-git log --pretty=fomat:
+git log --pretty=format:
 ->独自フォーマットを設定する
 
 
-fomatで使用できるプレスフォルダー
+formatで使用できるプレスフォルダー
 
 %H	      コミットのハッシュ
 %h	      コミットのハッシュ(短縮系)
@@ -90,7 +90,7 @@ blink:点滅
 
 
 個人的に見やすいgit logカスタマイズ
-git log --pretty=format:'[%ad %Cgreen%ar%Creset] %C(yellow)%h%Creset%C(auto)%d%Creset %s %C(bold cyan)<%an>%Creset' --date=format:'%Y-%m-%d %H:%M' --graph
+git log --pretty=format:'[%ad %Cgreen%ar%Creset] %C(yellow)%h %C(auto)%d  %s %C(bold cyan)<%an>' --date=format:'%Y-%m-%d %H:%M' --graph
 
 エイリアス編集
 vim ~/.gitconfig
