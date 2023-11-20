@@ -1,0 +1,12 @@
+docker imageコマンド
+
+
+docker image pull コマンド名
+->イメージをダウンロードするコマンド
+
+docker image ls
+->ローカルマシンに存在するイメージ一覧を表示するコマンド
+
+docker image rm イメージ名
+docker image rm イメージID
+->ローカルマシンに存在するイメージを削除するコマンド
