@@ -4,3 +4,11 @@ docker container run イメージ名
 
 docker container run -i イメージ名
 -> -i オプションをつけることで標準入力がターミナルに対してオープンになる
+
+
+docker container run -t イメージ名
+->色などで出力される結果が綺麗になる
+
+
+docker container run -it イメージ名
+-> -i と -tオプションを組み合わせている
