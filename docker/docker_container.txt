@@ -12,3 +12,9 @@ docker container run -t イメージ名
 
 docker container run -it イメージ名
 -> -i と -tオプションを組み合わせている
+
+
+docker container run イメージ名 実行したいコマンド名 
+->イメージからコンテナを新規作成し、起動して任意のコマンドを実行させるコマンド
+[例] docker container run -it イメージ名 pwd
+　　  　 docker container run -it イメージ名 ls
