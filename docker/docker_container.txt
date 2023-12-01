@@ -40,3 +40,7 @@ docker container run -v ボリューム名:コンテナ内絶対パス イメー
 docker container run --mount type=volume, src=ボリューム名, dst=コンテナ内絶対パス イメージ
 ->ボリュームに接続しながらコンテナを起動する
 [例] docker container run -it -v my-volume:/app1 イメージ名
+
+絶対パスなので . からはじまる階層は選べない、 / からはじます階層のみ
+
+-v と--mount の違いは書き方のみで挙動を同じ
