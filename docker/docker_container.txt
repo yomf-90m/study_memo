@@ -43,4 +43,11 @@ docker container run --mount type=volume, src=ボリューム名, dst=コンテ�
 
 絶対パスなので . からはじまる階層は選べない、 / からはじます階層のみ
 
+
 -v と--mount の違いは書き方のみで挙動を同じ
+
+docker container run -v ホスト絶対パス:コンテナ内絶対パス イメージ
+docker container run --mount type=bind, src=ホスト絶対パス,dst=コンテナ内絶対パス イメージ
+[例] docker container run -it -v /Users/maruyamamao/docker_tutorial/docker/my-dir:/app ubuntu:20.04
+   　　　docker container run -it -v $(pwd)/my-dir:/app ubuntu:20.04　でも同じ挙動
+
