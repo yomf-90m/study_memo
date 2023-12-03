@@ -51,3 +51,7 @@ docker container run --mount type=bind, src=ホスト絶対パス,dst=コンテ�
 [例] docker container run -it -v /Users/maruyamamao/docker_tutorial/docker/my-dir:/app ubuntu:20.04
    　　　docker container run -it -v $(pwd)/my-dir:/app ubuntu:20.04　でも同じ挙動
 
+
+バインドマウントしながらコンテナを起動する
+bashでファイルを修正するとホストOSで同じファイルを開くとホストでも修正された内容になる
+-v と--mount の違いは書き方のみで挙動を同じ
