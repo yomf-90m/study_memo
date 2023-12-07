@@ -72,3 +72,8 @@ docker container ls -a
 docker contaner stop コンテナ名(NAMES)
 docker contaner stop コンテナID
 ->起動中のコンテナを停止するコマンド
+
+
+docker container restart コンテナ名
+docker container restart コンテナID
+->コンテナを再起動(UP)にするコマンド
