@@ -58,7 +58,7 @@ bashでファイルを修正するとホストOSで同じファイルを開く�
 
 
 docker conteiner run -p ホスト側のポート:コンテナ側のポート イメージ名
--p によって、ホストマシンのポートをコンテナのポートに紐づける
+-> -p によって、ホストマシンのポートをコンテナのポートに紐づける
 
 
 docker container ls
@@ -67,3 +67,8 @@ docker container ls
 
 docker container ls -a
 -> -a オプションをつけることで、起動していないコンテナの表示される
+
+
+docker contaner stop コンテナ名(NAMES)
+docker contaner stop コンテナID
+->起動中のコンテナを停止するコマンド
