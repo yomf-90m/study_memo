@@ -77,3 +77,9 @@ docker contaner stop コンテナID
 docker container restart コンテナ名
 docker container restart コンテナID
 ->コンテナを再起動(UP)にするコマンド
+
+
+docker container rm コンテナ名
+docker container rm コンテナID
+->コンテナを破棄するコマンド
+  statusがup以外のコンテナのみ破棄できるコマンド
