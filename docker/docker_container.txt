@@ -83,3 +83,7 @@ docker container rm コンテナ名
 docker container rm コンテナID
 ->コンテナを破棄するコマンド
   statusがup以外のコンテナのみ破棄できるコマンド
+
+
+docker container rm -f コンテナ名
+-> -f オプションをつけることで強制的に削除できるのでup状態のコンテナも削除できる
