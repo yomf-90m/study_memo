@@ -87,3 +87,7 @@ docker container rm コンテナID
 
 docker container rm -f コンテナ名
 -> -f オプションをつけることで強制的に削除できるのでup状態のコンテナも削除できる
+
+
+docker contaner exec コンテナ名 実行したいコマンド
+->up状態(既存する)のコンテナに任意のコマンドを実行させるコマンド
