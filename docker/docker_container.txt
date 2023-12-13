@@ -96,3 +96,7 @@ docker contaner exec コンテナ名 実行したいコマンド
 docker container exec -d コンテナ名 実行したいコマンド
 -> -d オプションをつけるとコンテナがデタッチドモードで起動する
    何もつけないとフォアグラウンドモードでコンテナを起動す
+
+
+docker container prune(プルーン)
+->pruneオプションをつけることで、up以外のコンテナを一括で削除できる
