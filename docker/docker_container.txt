@@ -100,3 +100,7 @@ docker container exec -d コンテナ名 実行したいコマンド
 
 docker container prune(プルーン)
 ->pruneオプションをつけることで、up以外のコンテナを一括で削除できる
+
+
+docker container attach コンテナ名
+->デタッチドモードになっているコンテナに接続するコマンド
