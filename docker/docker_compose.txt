@@ -1,0 +1,2 @@
+docker compose up
+->docker-compose.ymlに記載されているコマンドを起動し、コンテナ立ち上げる
