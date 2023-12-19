@@ -1,2 +1,6 @@
 docekr volume create ボリューム名
 ->新しいボリューム領域を作成する
+
+
+docekr volume ls 
+->ボリューム領域一覧を表示する
