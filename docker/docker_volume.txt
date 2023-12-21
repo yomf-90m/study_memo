@@ -8,3 +8,7 @@ docekr volume ls
 
 docekr volume inspect ボリューム名
 ->指定したボリューム領域の詳細情報を表示する
+
+
+docekr volume rm ボリューム名
+->指定したボリューム領域を削除する
