@@ -5,3 +5,10 @@ docker network ls
 docker network inspect ネットワーク名
 ->ネットワークの詳細情報を表示する
   どのコンテナがどのネットワークに繋がっているか確認することができる
+
+
+docker network create ネットワーク名
+->新しいネットワークを作成する
+
+[例] docker network create my-net
+ドライバがブリッジのネットワークを作成する
