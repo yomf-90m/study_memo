@@ -18,3 +18,7 @@ docker network run --network ネットワーク名　イメージ名
 ->指定したネットワークに接続したコンテナを起動する
 
 [例]docker container run --network my-net nginx
+
+
+docker network rm ネットワーク名
+->指定したネットワークを削除する
