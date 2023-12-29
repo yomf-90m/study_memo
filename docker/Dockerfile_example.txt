@@ -1,0 +1,12 @@
+COPYについて
+
+COPY コピー元 コピー先
+[例]　COPY /app .
+
+COPY --from=0 コピー元 コピー先
+--from=0 は０番目のFROM(１番上)からコピーをする
+マルチステージビルドで使用する
+
+コピーしたいFROMに名前をつけて --from=名前 で指定することも可能 
+[例] FROM gcc:12.2.0 AS compiler
+　　    COPY --from=conpiler コピー元 コピー先
