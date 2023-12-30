@@ -10,3 +10,18 @@ COPY --from=0 コピー元 コピー先
 コピーしたいFROMに名前をつけて --from=名前 で指定することも可能 
 [例] FROM gcc:12.2.0 AS compiler
 　　    COPY --from=conpiler コピー元 コピー先
+
+
+
+WORKDIR(ワークディル/ワーキングディレクトリ)について
+
+WORKDIR ディレクトリパス
+[例] RUN touch 1.txt    　※ / (ルート)ディレクトリに空の1.txtファイルが作成される
+     WORKDIR /app/my_dir  ※ /app/my_dirディレクトリを指定
+     RUN touch 2.txt　　　 ※ /app/my_dirディレクトリに空の2.txtファイルが作成される
+     WORKDIR ..　　　　　 　※ /app/my_dirディレクトリの1つ上の階層の/appディレクトリを指定
+     RUN touch 3.txt      ※/appディレクトリに空の3.txtファイルが作成される
+
+Dockerfileに記載する
+RUNやCMDなどの作業ディレクトリを指定する
+未指定時は /(ルート) が作業ディレクトリになっている
