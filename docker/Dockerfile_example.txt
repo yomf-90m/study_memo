@@ -1,4 +1,4 @@
-COPYについて
+COPY　について
 
 COPY コピー元 コピー先
 [例]　COPY /app .
@@ -13,7 +13,7 @@ COPY --from=0 コピー元 コピー先
 
 
 
-WORKDIR(ワークディル/ワーキングディレクトリ)について
+WORKDIR(ワークディル/ワーキングディレクトリ)　について
 
 WORKDIR ディレクトリパス
 [例] RUN touch 1.txt    　※ / (ルート)ディレクトリに空の1.txtファイルが作成される
@@ -25,3 +25,22 @@ WORKDIR ディレクトリパス
 Dockerfileに記載する
 RUNやCMDなどの作業ディレクトリを指定する
 未指定時は /(ルート) が作業ディレクトリになっている
+
+
+
+ARG(アーギュメント：引数) について
+
+ARG キー1(変数名)=デフォルト値(初期値)
+[例1] ARG message
+      RUN echo $message > message.txt
+コンテナを実行してもmessageの値がないので何も表示されない
+
+[例2] docker container run -it --build-arg message=値 .
+--build-arg 変数名=値 とするとDockerfileに記述していなくても
+コンテナ実行時に表示されるようになる
+
+
+Dockerfileに記載する
+イメージ作成時のみに利用する一時的な変数を渡す
+Dockerfileの中で使える変数を渡すことができる
+bashに入って echo $変数名 で確認しても中身は何もない
