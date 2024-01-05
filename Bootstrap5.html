@@ -58,9 +58,27 @@ Colors (カラー) の変更方法・・・.text-テーマカラー、.bg-テー
 例えば「.text-primary」を使うと、青になる
 
 
-
 <p class="bg-danger text-white">bg-danger</p>
 
 .bg-*・・・背景に色を付ける、
 例えば「.bg-danger」を使うと、赤になる
 フォントサイズだけを変更したい場合は、
+
+
+
+Buttons (ボタン) の表示方法・・・.btn、.btn-テーマカラー
+
+<button type="button" class="btn btn-primary">Primary</button>
+
+.btn .btn-*・・・ボタンクラスで、
+例えば「.btn .btn-primary」を使うと、青のボタンになる
+
+
+<a class="btn btn-secondary" href="#" role="button">Link</a>
+<input class="btn btn-success" type="button" value="Input">
+
+<a>タグや、<input>タグでも、ボタンクラスを使うことができる
+
+
+<button type="button" class="btn btn-outline-danger">Danger</button>
+枠だけのボタンを作りたい場合は、アウトラインボタンを使う
