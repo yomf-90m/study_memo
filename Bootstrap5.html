@@ -239,3 +239,94 @@ bootstrap-icons.cssを、CDN（jsDeliver）で読み込むと、簡単に使え�
 </footer>
 
 .mt-auto・・・上に余白(マージン)を自動でつける
+
+
+
+<!-- ナビゲーションバー -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top" id="navbar">
+    <div class="container">
+      <a href="#" class="navbar-brand">
+        <i class="bi bi-app-indicator"></i>
+        ITスクール(仮)
+      </a>
+      <!-- トグルボタン -->
+      <!-- リンク一覧 -->
+    </div>
+  </nav>
+
+<nav>にて
+.nav・・・ナビゲーションバーのクラス
+.navbar-expand-lg・・・折りたたみの展開に必要なクラス、末尾にブレークポイントを指定できる
+.navbar-dark・・・暗い背景の場合に使用（テキストが白くなる）、
+                 明るい背景の場合は.navbar-ligthを使用（テキストが黒になる）
+fixed-top・・・要素の位置（ポジション）を上部にする
+
+<a>にて
+.navbar-brand・・・名前（会社、製品、プロジェクト名など）用のクラス
+
+
+
+<!-- トグルボタン -->
+<button class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+　　<span class="navbar-toggler-icon"></span>
+</button>
+
+トグルとは・・・同じ操作を繰り返すことで機能や状態のON/OFFを切り替える仕組み
+
+<button>にて
+.navbar-toggler・・・折りたたみや、ナビゲーションのトグル動作に必要
+data-bs-toggle="collapse"とdata-bs-target・・・折りたたみの制御を自動的に割り当てる
+data-bs-targetには折りたたみ対象の名前(CSSセレクタ)を指定する　
+area-controls・・・スクリーンリーダー(読み上げブラウザ)に、コントロールする用を(関連づけ)を伝える
+aria-expanded・・・スクリーンリーダーに開閉状態を伝える
+aria-label・・・スクリーンリーダーにラベル(文字列)を伝える
+aria-*属性はハンディキャップを持つ人に、利用情報を伝えるための属性
+
+<span>にて
+navbar-toggler-icon・・・折りたたみのアイコン
+
+
+
+<!-- リンク一覧 -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a href="#home" class="nav-link active" aria-current="page">
+              ホーム
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#course" class="nav-link">コース</a>
+          </li>
+          <li class="nav-item">
+            <a href="#reputation" class="nav-link">評判</a>
+          </li>
+          <li class="nav-item">
+            <a href="#content" class="nav-link">講座内容</a>
+          </li>
+          <li class="nav-item">
+            <a href="#pricing" class="nav-link">価格</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contactUs" class="nav-link">お問い合わせ</a>
+          </li>
+        </ul>
+      </div>
+
+<div>にて
+.collapse .navbar-collapse・・・折りたたみ(collapse)できるようになる
+
+<ul>にて
+.navbar-nav・・・ナビゲーションバーのクラス(ドロップダウンのサポートを含める)
+.ms-auto・・・左に余白(マージン)を自動でつける
+
+<li>, <a>にて
+.nav-item .nav-link・・・ナビゲーションバーのアイテムと、リンクを定義
+.active・・・アクティブな状態を示す(対象のテキストが強調される)
+aria-current・・・スクリーンリーダーに、カレント(現在位置)を伝える
