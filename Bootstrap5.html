@@ -445,3 +445,32 @@ row-cols-md-4・・・md(768px以上)の場合は４列でそれ以外は１列�
 
 .card-footer・・・カードのフッターを表示する
 .w-100・・・幅を100％にする
+
+
+
+
+<!-- 横方向で配置 -->
+<div class="hstack mb-3">
+  <i class="bi bi-envelope-fill text-danger fs-3"></i>
+  <div class="ms-3">
+    <!-- 孫要素は、.hstackの影響を受けません（横に並ばない） -->
+    <h5 class="mb-1">Eメール</h5>
+    <span class="text-muted">info@example.com</span>
+  </div>
+</div>
+
+アイコンとEメールを.hstackを使って平行にした
+
+.hstack・・・水平レイアウト(横方向)にする
+　　　　　　　孫要素は、.hstackの影響を受けない
+
+  
+
+<!-- フォーム -->
+<form action="#" method="post">
+  <div class="mb-3">
+    <input type="text" class="form-control shadow-sm" placeholder="氏名">
+  </div>
+
+.form-control・・・スタイルやサイズを(Bootstrap用に)調整する
+　　　　　　　　　　　<input>や<textarea>などの入力項目に設定する
