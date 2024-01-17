@@ -408,3 +408,40 @@ row-cols-md-4・・・md(768px以上)の場合は４列でそれ以外は１列�
 </div>
 
 カードの高さを揃えたい時は .h-100 を使う
+
+
+
+<div class="card shadow-sm h-100">
+  <div class="card-header">
+    <h4 class="fw-nomal">無料</h4>
+  </div>
+</div>
+
+.card-header・・・カードのヘッダーを表示
+.fw-normal・・・フォントの大きさを標準の大きさにする
+　　　　　　　　　cssの「font-weight: 400」と同じ効果
+
+
+
+<div class="card-body">
+  <h1 class="card-title text-danger">0円</h1>
+  <ul class="list-group list-group-flush">
+    <li class="list-group">カウンセリング</li>
+    <li class="list-group">チャットサポート</li>
+  </ul>
+</div>
+
+.list-group・・・リストグループを表示する、
+　　　　　　　　   各アイテムには.list-group-itemを使用する
+.list-group-flush・・・枠線を除外する
+
+
+
+<div class="card-footer">
+  <a href="#" class="w-100 btn btn-outline-danger">
+    無料登録
+  </a>
+</div>
+
+.card-footer・・・カードのフッターを表示する
+.w-100・・・幅を100％にする
