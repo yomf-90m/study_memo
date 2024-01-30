@@ -1,0 +1,13 @@
+if文
+->else節がなく、尚且つどの条件にも合致しなかった場合は nil が返る(falseではない)
+[例]
+country = 'italy'
+
+greeting =
+  if country == 'japan'
+    'こんにちは'
+  elsif country == 'us'
+    'Hello'
+  end
+
+greeting #=> nil
