@@ -4,12 +4,20 @@
 # %q! !はシングルクオートで囲んだことと同じ意味になる
 puts %q!He said, "Don't speak."! #=> He said, "Don't speak."
 
-
 # %Q! !はダブルクオートで囲んだことと同じ意味になる(改行文字や式展開が使える)
 someting = "Hello."
 puts %Q!He said, "#{someting}"! #=> He said, "Hello."
 
-
 # %! !もダブルクオートで囲んだことと同じ意味になる
 someting = "Bey."
 puts %!He said, "#{someting}"! #=> He said, "Bey."
+
+
+[例] %記法を使用しなかった場合
+puts 'He said, "Don\'t speak."' #=> He said, "Don't speak."
+
+someting = "Hello."
+puts "He said, \"#{someting}\"" #=> He said, "Hello."
+
+someting = "Bey."
+puts "He said, \"#{someting}\"" #=> He said, "Bey."
