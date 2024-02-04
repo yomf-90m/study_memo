@@ -21,3 +21,12 @@ puts "He said, \"#{someting}\"" #=> He said, "Hello."
 
 someting = "Bey."
 puts "He said, \"#{someting}\"" #=> He said, "Bey."
+
+
+->%q! !のように ! を使って区切り文字を使ったが ? や ^ などの任意の記号を区切り文字として使うことができる、(), {}, <>でも使用できる
+[例]
+# ?を区切り文字として使用
+puts %q?He said, "Don't speak."? #=> He said, "Don't speak."
+
+# <>を区切り文字として使用
+puts %q<He said, "Don't speak."> #=> He said, "Don't speak."
