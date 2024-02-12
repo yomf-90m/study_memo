@@ -138,3 +138,49 @@ TEXT
 
 puts a
 #=> こんにちは\nさようなら
+
+
+->開示ラベルの <<識別子 は１つの式としてみなされるので <<識別子 をメソッドの引数として渡したり、 <<識別子 に対してメソッドを呼び出すこのもできる
+[例1] ヒアドキュメントを直接引数として渡す
+a = 'Ruby'
+
+# prependは渡された文字列を先頭に追加するメソッド
+a.prepend(<<TEXT)
+Java
+Python
+TEXT
+
+puts a
+#=> Java
+#=> Python                         
+#=> Ruby
+
+
+[例2] ヒアドキュメントで作成した文字列に対して、直接upcaseメソッドを呼び出す
+# upcaseメソッドは文字列を全て大文字にするメソッド
+b = <<TEXT.upcase
+Hello,
+Good-bye.
+TEXT
+
+puts b
+#=> HELLO,
+#=> GOOD-BYE.
+
+
+[例3] ヒアドキュメントを２つ同時に使って配列を作る
+c = [<<TEXT1, <<TEXT2]
+Alice
+Bob
+TEXT1
+Matz
+Jnchito
+TEXT2
+
+puts c[0]
+#=> Alice
+#=> Bob
+
+puts c[1]
+#=> Matz
+#=> Jnchito
