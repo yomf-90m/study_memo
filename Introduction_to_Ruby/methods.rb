@@ -94,6 +94,42 @@ point(3, 10) #=> x=3, y=10
 
 
 
+?で終わるメソッド
+→ ? で終わるメソッド名は真偽値(trueかfalse)を返すメソッドになっている。
+  このようなメソッドを述語メソッドと言う。
+[例] 空文字列であれはtrue, そうでなければfalse
+''.empty?    #=> true
+'abc'.empty? #=> false
+
+[例] 引数の文字列が含まれていればtrue, そうでなければfalse
+'watch'.include?('at') #=> true
+'watch'.include?('ta') #=> false
+'watch'.include?('in') #=> false
+
+[例] 奇数ならtrue, そうでないならfalse
+1.odd? #=> true
+2.odd? #=> false
+
+[例] 偶数ならtrue, そうでないならfalse
+1.even? #=> false
+2.even? #=> true
+
+[例] オブジェクトがnilならtrue, そうでないならfalse
+nil.nil?   #=> true
+'abc'.nil? #=> false 
+1.nil?     #=> false
+
+[例] ３の倍数ならtrue, それ以外はfalseを返す
+def multiple_of_three?(n)
+  n % 3 == 0
+end
+
+multiple_of_three?(4) #=> false
+multiple_of_three?(5) #=> false
+multiple_of_three?(6) #=> true
+
+
+
 sprintfメソッド
 →指定されたフォーマットの文字列を作成するメソッド
 [例1] 1.2の小数第３位まで数字を表示する文字列を作成
