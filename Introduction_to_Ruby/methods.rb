@@ -83,6 +83,15 @@ end
 
 foo #=> time: 2023-12-25 15:25:54 +0900, message: BAR
 
+→デフォルト値は左にある引数を指定することもできる
+[例] y が指定されなけれは x の値を y に設定する
+def point(x, y = x)
+  puts "x=#{x}, y=#{y}"
+end
+
+point(3)     #=> x=3, y=3
+point(3, 10) #=> x=3, y=10
+
 
 
 sprintfメソッド
