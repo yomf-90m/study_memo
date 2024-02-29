@@ -130,6 +130,42 @@ multiple_of_three?(6) #=> true
 
 
 
+!で終わるメソッド
+→！で終わるメソッドは！がついていないメソッドよりも危険。
+呼び出したオブジェクトの状態を変更してしまうメソッドのことを破壊的メソッドと呼ぶ。
+a = 'ruby'
+
+[例] upcaseだと変数aの値は変化しない 
+a.upcase #=> "RUBY"
+a        #=> "ruby"
+
+[例] upcase!だと変数aの値も大文字に変わる
+a.upcase! #=> "RUBY"
+a         #=> "RUBY"
+
+[例] 引数の内容を変更しない安全バージョンのメソッドの定義
+def reverse_upcase(s)
+  s.reverse.upcase
+end
+
+[例] 引数の内容を破壊的に変更してしまう危険バージョンのメソッドの定義
+def reverse_upcase!(s)
+  s.reverse!
+  s.upcase!
+end
+
+s = 'ruby'
+
+[例] 安全バージョンは引数として渡した変数sの内容はそのまま
+reverse_upcase(s) #=> "YBUR"
+s                 #=> "ruby"
+
+[例] 危険バージョンは引数として渡した変数sの内容が変更される
+s.reverse_upcase! #=> "YBUR"
+s                 #=> "YBUR"
+
+
+
 sprintfメソッド
 →指定されたフォーマットの文字列を作成するメソッド
 [例1] 1.2の小数第３位まで数字を表示する文字列を作成
