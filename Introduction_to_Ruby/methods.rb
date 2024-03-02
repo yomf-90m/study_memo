@@ -164,6 +164,17 @@ s                 #=> "ruby"
 s.reverse_upcase! #=> "YBUR"
 s                 #=> "YBUR"
 
+→メソッド名は ! や ? で終わることができるが変数名に ! や ? は使えない
+[例] ? で終わる変数名を定義しようとすると構文エラーが起こる
+odd? = 1.odd?
+#=> syntax error, unexpected '=' (SyntaxError)
+#=> odd? = 1.odd?
+
+[例] ! で終わる変数名を定義しようとすると構文エラーが起こる
+upcase! = 'ruby'.upcase!
+#=> syntax error, unexpected '=' (SyntaxError)
+#=> upcase! = 'ruby'.upcase!
+
 
 
 sprintfメソッド
