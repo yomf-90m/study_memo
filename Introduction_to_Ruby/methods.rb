@@ -43,6 +43,39 @@ greeting('japan') #=> 'こんにちは'
 
 
 
+エンドレスメソッド定義
+→endを省略して１行でメソッドを定義できる(Ruby 3.0では)
+[例] 通常のメソッド定義
+def greet
+  'Hello'
+end
+
+[例] エンドレスメソッド定義(=に続けて処理や戻り値を書く)
+def greet = 'Hello'
+
+# 呼び出し方は通常ver.とエンドレスメソッドver.どちらも同じ
+greet #=> "Hello"
+
+# ただし、メソッド名と=の間にスペースがないと構文エラーが起こる
+def greet= 'Hello'
+#=> syntax error, unexpected string literal, expecting ';' or '\n'
+
+[例] 通常のメソッド定義(引数を持つ場合)
+def add(a, b)
+  a + b
+end
+
+[例] エンドレスメソッド定義
+def add(a, b) = a + b
+add(1, 2) #=> 3
+
+# ただし、引数の()を省略すると構文エラーが起こる
+def add a, b = a + b
+#=> circular argument reference - b
+#=> syntax error, unexpected end-of-input, expecting ';' or '\n'
+
+
+  
 デフォルト値付きの引数
 →メソッドの引数の数を柔軟に変えるための方法の１つ
 def メソッド名(引数1 = デフォルト値1, 引数2 = デフォルト値2)
