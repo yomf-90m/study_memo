@@ -111,3 +111,8 @@ true = 1
 #=> Can't assign to true (SyntaxError)
 #=> true = 1
 #=> ^~~~
+
+
+
+グローバル関数
+→プログラムのどこからでも呼び出せる関数のこと。
