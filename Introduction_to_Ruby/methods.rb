@@ -32,3 +32,21 @@ puts s
 abc
 efg                                              
 #=> nil
+
+
+printメソッド
+→printメソッドは改行を加えない。
+改行文字を含む文字列を渡したとき改行して出力される。
+[例]
+print 123
+123=> nil
+
+print 'abc'
+abc=> nil
+
+[例] 改行文字を含む文字列を渡した場合
+s = "abc\nefg"
+
+print s
+abc
+efg=> nil
