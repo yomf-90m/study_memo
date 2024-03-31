@@ -7,3 +7,18 @@ numbers.each do |n|
   sum += n
 end
 sum #=> 10
+
+
+
+for文での繰り返し処理
+for 変数 in 配列やハッシュ
+  繰り返し処理
+end
+
+[例]
+numbers = [1, 2, 3, 4]
+sum = 0
+for n in numbers
+  sum += n
+end
+sum #=> 10
