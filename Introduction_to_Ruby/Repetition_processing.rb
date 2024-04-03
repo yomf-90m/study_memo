@@ -42,3 +42,13 @@ n         #=> 4
 sum_value #=> 40
 
 →eachメソッドはブロックパラメータやブロック内で作成した変数をブロックの外では参照できない。
+[例] eachメソッドの場合
+numbers = [1, 2, 3, 4]
+sum = 0
+numbers.each do |n|
+  sum_value = n.even? ? n * 10 : n
+  sum += sum_value
+end
+sum       #=> 64
+n         #=> undefined local variable or method `n' for main:Object (NameError)
+sum_value #=> undefined local variable or method `sum_value' for main:Object (NameError)
