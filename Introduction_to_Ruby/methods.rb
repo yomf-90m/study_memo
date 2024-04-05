@@ -139,3 +139,9 @@ a.last(2) #=> [2, 3]
 
 mapメソッド
 →mapメソッドは各要素に対してブロックを評価した結果を新しい配列にして返す(エイリアスメソッドがcollect)
+[例] eachメソッドの場合
+numbers = [1, 2, 3, 4, 5]
+new_numbers = []
+numbers.each { |n| new_numbers << n * 10 }
+
+new_numbers #=> [10, 20, 30, 40, 50]
