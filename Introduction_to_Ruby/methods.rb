@@ -165,3 +165,13 @@ numbers = [1, 2, 3, 4, 5, 6]
 # ブロックの戻り値が真になった要素だけが集められる
 even_numbers = numbers.select { |n| n.even? }
 even_numbers #=> [2, 4, 6]
+
+
+
+rejectメソッド
+→rejectメソッドはselectメソッドの反対で、ブロックの戻り値が真になった要素を除外した配列を返す、ブロックの戻り値が偽である要素を集めるメソッド。
+[例]
+numbers = [1, 2, 3, 4, 5, 6]
+# 3の倍数を除外する(３の倍数以外を集める)
+non_multiples_of_three = numbers.reject { |n| n % 3 == 0 }
+non_multiples_of_three #=> [2, 4, 6]
