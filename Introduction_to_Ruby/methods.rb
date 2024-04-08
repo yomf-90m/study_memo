@@ -175,3 +175,13 @@ numbers = [1, 2, 3, 4, 5, 6]
 # 3の倍数を除外する(３の倍数以外を集める)
 non_multiples_of_three = numbers.reject { |n| n % 3 == 0 }
 non_multiples_of_three #=> [2, 4, 6]
+
+
+
+findメソッド
+→findメソッド(エイリアスメソッドはdetect)はブロックの戻り値が真になった最初の要素を返す。
+[例]
+numbers = [1, 2, 3, 4, 5, 6]
+# ブロックの戻り値が最初に真になった要素を返す
+even_numbers = numbers.find { |n| n.even? }
+evev_numbers #=> 2
