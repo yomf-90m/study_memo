@@ -185,3 +185,11 @@ numbers = [1, 2, 3, 4, 5, 6]
 # ブロックの戻り値が最初に真になった要素を返す
 even_numbers = numbers.find { |n| n.even? }
 evev_numbers #=> 2
+
+
+
+sumメソッド
+→要素の合計を求めるメソッド。
+[例]
+numbers = [1, 2, 3, 4]
+numbers.sum #=> 10
