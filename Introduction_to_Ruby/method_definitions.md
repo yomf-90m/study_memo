@@ -1,5 +1,6 @@
-メソッドの定義の基本
-→Rubyではメソッドを呼び出す際に引数に過不足があるとエラーになる
+### メソッドの定義の基本
+→Rubyではメソッドを呼び出す際に引数に過不足があるとエラーになる。
+```
 def greet(country)
   if country == 'japan'
     'こんにちは'
@@ -7,7 +8,8 @@ def greet(country)
     'Hello'
   end
 end
-
+```
+```
 [例] 引数がちょうど
 greet('us') #=> "Hello"
 
@@ -19,11 +21,11 @@ greet
 [例] 引数が多い
 greet('japan', 'us') 
 #=> wrong number of arguments (given 2, expected 1) (ArgumentError)
+```
 
-
-
-メソッドの戻り値
-→returnメソッドはメソッドを途中で抜け出す場合に使われることが多い
+### メソッドの戻り値
+→returnメソッドはメソッドを途中で抜け出す場合に使われることが多い。
+```
 [例]
 def greeting(country)  # (引数)は仮の引数名なのでメソッドを呼び出す際に違う名前の引数でも処理は動く
 
@@ -40,11 +42,11 @@ end
 # メソッドを呼び出す時の引数名が本引数名になる
 greeting(nil)     #=> 'countryを入力してください'    
 greeting('japan') #=> 'こんにちは'
+```
 
-
-
-エンドレスメソッド定義
-→endを省略して１行でメソッドを定義できる(Ruby 3.0では)
+### エンドレスメソッド定義
+→endを省略して１行でメソッドを定義できる(Ruby 3.0では)。
+```
 [例] 通常のメソッド定義
 def greet
   'Hello'
@@ -73,15 +75,16 @@ add(1, 2) #=> 3
 def add a, b = a + b
 #=> circular argument reference - b
 #=> syntax error, unexpected end-of-input, expecting ';' or '\n'
-
-
+```
   
-デフォルト値付きの引数
-→メソッドの引数の数を柔軟に変えるための方法の１つ
+### デフォルト値付きの引数
+→メソッドの引数の数を柔軟に変えるための方法の１つ。
+```
 def メソッド名(引数1 = デフォルト値1, 引数2 = デフォルト値2)
   # 必要な処理
 end
-
+```
+```
 [例]
 def greet(country = 'japan')
   if country == 'japan'
@@ -93,8 +96,10 @@ end
 
 greet #=> "こんにちは"
 greet('us') #=> "Hello"
+```
 
-→デフォルト値ありとデフォルト値なしの引数の引数を混在することができる
+→デフォルト値ありとデフォルト値なしの引数の引数を混在することができる。
+```
 [例]
 def default_args(a, b, c = 0, d = 0)
   "a=#{a}, b=#{b}, c=#{c}, d=#{d}"
@@ -103,8 +108,10 @@ end
 default_args(1, 2)       #=> "a=1, b=2, c=0, d=0"
 default_args(1, 2, 3)    #=> "a=1, b=2, c=3, d=0"
 default_args(1, 2, 3, 4) #=> "a=1, b=2, c=3, d=4"
+```
 
-→デフォルト値は固定の値だけでなく、動的に変わる値や、他のメソッドの戻り値を指定することもできる
+→デフォルト値は固定の値だけでなく、動的に変わる値や、他のメソッドの戻り値を指定することもできる。
+```
 [例] システム日時や他のメソッドの戻り値をデフォルト値に指定する
 def foo(time = Time.now, message = bar)
   puts "time: #{time}, message: #{message}"
@@ -115,8 +122,10 @@ def bar
 end
 
 foo #=> time: 2023-12-25 15:25:54 +0900, message: BAR
+```
 
-→デフォルト値は左にある引数を指定することもできる
+→デフォルト値は左にある引数を指定することもできる。
+```
 [例] y が指定されなけれは x の値を y に設定する
 def point(x, y = x)
   puts "x=#{x}, y=#{y}"
@@ -124,12 +133,13 @@ end
 
 point(3)     #=> x=3, y=3
 point(3, 10) #=> x=3, y=10
+```
 
-
-
-?で終わるメソッド
+### ?で終わるメソッド
 → ? で終わるメソッド名は真偽値(trueかfalse)を返すメソッドになっている。
-  このようなメソッドを述語メソッドと言う。
+
+このようなメソッドを述語メソッドと言う。
+```
 [例] 空文字列であれはtrue, そうでなければfalse
 ''.empty?    #=> true
 'abc'.empty? #=> false
@@ -160,12 +170,13 @@ end
 multiple_of_three?(4) #=> false
 multiple_of_three?(5) #=> false
 multiple_of_three?(6) #=> true
+```
 
-
-
-!で終わるメソッド
+### !で終わるメソッド
 →！で終わるメソッドは！がついていないメソッドよりも危険。
+
 呼び出したオブジェクトの状態を変更してしまうメソッドのことを破壊的メソッドと呼ぶ。
+```
 a = 'ruby'
 
 [例] upcaseだと変数aの値は変化しない 
@@ -196,8 +207,10 @@ s                 #=> "ruby"
 [例] 危険バージョンは引数として渡した変数sの内容が変更される
 s.reverse_upcase! #=> "YBUR"
 s                 #=> "YBUR"
+```
 
-→メソッド名は ! や ? で終わることができるが変数名に ! や ? は使えない
+→メソッド名は ! や ? で終わることができるが変数名に ! や ? は使えない。
+```
 [例] ? で終わる変数名を定義しようとすると構文エラーが起こる
 odd? = 1.odd?
 #=> syntax error, unexpected '=' (SyntaxError)
@@ -207,3 +220,4 @@ odd? = 1.odd?
 upcase! = 'ruby'.upcase!
 #=> syntax error, unexpected '=' (SyntaxError)
 #=> upcase! = 'ruby'.upcase!
+```
