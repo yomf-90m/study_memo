@@ -52,9 +52,6 @@ fs-1が1番大きい。
 <p class="fs-6">Font size 6</p> 
 ```
 
-
-
-
 ### Colors (カラー) の変更方法
 →text-テーマカラー、.bg-テーマカラー。
 ```
@@ -93,10 +90,7 @@ fs-1が1番大きい。
 <button type="button" class="btn btn-outline-danger">Danger</button>
 ```
 
-
-
-
-### Spacing (スペーシング) の指定方法
+## Spacing (スペーシング) の指定方法
 ### m、p
 ```
 <div class="m-3 p-3">
@@ -170,11 +164,11 @@ xl              1200px以上
 xxl             1400px以上
 ```
 
-row
-→行を指定
-col
-→列を指定
+### row
+→行を指定。
 
+### col
+→列を指定。
 ```
 <div class="row">
   <div class="col-3">col-3</div>
@@ -183,11 +177,12 @@ col
 </div>
 ```
 
-col-*
-→列は、1～12の値を指定できる
-例えば、上記のように記述すると、「3：6：3」の比率で表示される
+### col-*
+→列は、1～12の値を指定できる。
 
+例えば、上記のように記述すると、「3：6：3」の比率で表示される。
 
+ブレークポイントを設定すると、768px以上は「4：4：4」、それ以外は「6：6」にできる。
 ```
 <div class="row">
   <div class="col-6 col-md-4">1 of 3</div>
@@ -196,8 +191,14 @@ col-*
 </div>
 ```
 
-ブレークポイントを設定すると、768px以上は「4：4：4」、それ以外は「6：6」にできる
+### text-start
+→テキストを、左に配置（RTL=右書きの場合、右）。
 
+### text-center
+→テキストを、中央に配置。
+
+### text-end
+→テキストを、右に配置（RTL=右書きの場合、左）。
 ```
 <div class="row">
   <div class="col text-start">text-start</div>
@@ -206,35 +207,38 @@ col-*
 </div>
 ```
 
-text-start
-→テキストを、左に配置（RTL=右書きの場合、右）
-text-center
-→テキストを、中央に配置
-text-end
-→テキストを、右に配置（RTL=右書きの場合、左）
+### justify-content-center
+→アイテムを、左右中央に配置。
 
+左に配置する場合は、.justify-content-start。
+
+右に配置する場合は、.justify-content-endを使用。
 ```
 <div class="row justify-content-center">
   <div class="col-6">justify-content-center</div>
 </div>
 ```
 
-justify-content-center
-→アイテムを、左右中央に配置
-左に配置する場合は、.justify-content-start
-右に配置する場合は、.justify-content-endを使用
+### align-items-center
+→アイテムを、上下中央に配置。
 
+上に配置する場合は、align-items-start。
+
+下に配置する場合は、align-items-endを使用。
 ```
 <div class="row align-items-center">
   <div class="col-4">align-items-center</div>
 </div>
 ```
 
-align-items-center
-→アイテムを、上下中央に配置
-上に配置する場合は、align-items-start
-下に配置する場合は、align-items-endを使用
+### align-self-start
+→（自身を）上に配置。
 
+### align-self-center
+→（自身を）上下中央に配置。
+
+### align-self-end
+→（自身を）下に配置。
 ```
 <div class="row">
   <div class="col align-self-start">align-self-start</div>
@@ -243,21 +247,21 @@ align-items-center
 </div>
 ```
 
-align-self-start
-→（自身を）上に配置
-align-self-center
-→（自身を）上下中央に配置
-align-self-end
-→（自身を）下に配置
-
+### Bootstrap Icons
+→公式のアイコンライブラリで、bootstrap-icons.cssを、CDN（jsDeliver）で読み込むと、簡単に使える。
 ```
  <!-- Bootstrap Icons CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet">
 ```
 
-Bootstrap Iconsは、公式のアイコンライブラリで、
-bootstrap-icons.cssを、CDN（jsDeliver）で読み込むと、簡単に使える
+### bi .bi-pencil
+→Pencilアイコンを使用。
 
+### bi .bi-link
+→Linkアイコンを使用。
+
+### text-decoration-none
+→（リンクの）下線を削除。
 ```
 <p class="fs-2">
   <i class="bi bi-pencil"></i>
@@ -269,27 +273,22 @@ bootstrap-icons.cssを、CDN（jsDeliver）で読み込むと、簡単に使え�
 </a>
 ```
 
-bi .bi-pencil
-→Pencilアイコンを使用
-bi .bi-link
-→Linkアイコンを使用
-text-decoration-none
-→（リンクの）下線を削除
+### h-100
+→高さを100％にする。
 
+### vstack
+→対象を垂直レイアウト(縦方向)にする。
 
+### hstack
+→対象を水平レイアウト(横方向)にする。
 ```
 <html lang="ja" class="h-100">
 <!-- 省略 -->
 <body class="h-100 vstack">
 ```
 
-h-100
-→高さを100％にする
-vstack
-→対象を垂直レイアウト(縦方向)にする
-hstack
-→対象を水平レイアウト(横方向)にする
-
+### mt-auto
+→上に余白(マージン)を自動でつける。
 ```
 <footer class="mt-auto py-2 bg-danger text-white">
   <div class="container text-center">
@@ -298,9 +297,24 @@ hstack
 </footer>
 ```
 
-mt-auto
-→上に余白(マージン)を自動でつける
+## navタグにて
+### nav
+→ナビゲーションバーのクラス。
 
+### navbar-expand-lg
+→折りたたみの展開に必要なクラス、末尾にブレークポイントを指定できる。
+
+### navbar-dark
+→暗い背景の場合に使用（テキストが白くなる）。
+
+明るい背景の場合は.navbar-ligthを使用（テキストが黒になる）。
+
+### fixed-top
+→要素の位置（ポジション）を上部にする。
+
+## <a>にて
+### navbar-brand
+→名前（会社、製品、プロジェクト名など）用のクラス。
 ```
 <!-- ナビゲーションバー -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top" id="navbar">
@@ -315,22 +329,32 @@ mt-auto
   </nav>
 ```
 
-<nav>にて
-nav
-→ナビゲーションバーのクラス
-navbar-expand-lg
-→折りたたみの展開に必要なクラス、末尾にブレークポイントを指定できる
-navbar-dark
-→暗い背景の場合に使用（テキストが白くなる）、
-明るい背景の場合は.navbar-ligthを使用（テキストが黒になる）
-fixed-top
-→要素の位置（ポジション）を上部にする
+トグルとは
+→同じ操作を繰り返すことで機能や状態のON/OFFを切り替える仕組み
 
-<a>にて
-navbar-brand
-→名前（会社、製品、プロジェクト名など）用のクラス
+## buttonタグにて
+### navbar-toggler
+→折りたたみや、ナビゲーションのトグル動作に必要。
 
+### data-bs-toggle="collapse"とdata-bs-target
+→折りたたみの制御を自動的に割り当てる。
 
+data-bs-targetには折りたたみ対象の名前(CSSセレクタ)を指定する　。
+
+### area-controls
+→スクリーンリーダー(読み上げブラウザ)に、コントロールする用を(関連づけ)を伝える。
+
+### aria-expanded
+→スクリーンリーダーに開閉状態を伝える。
+
+### aria-label
+→スクリーンリーダーにラベル(文字列)を伝える。
+
+aria-*属性はハンディキャップを持つ人に、利用情報を伝えるための属性。
+
+## spanタグにて
+### navbar-toggler-icon
+→折りたたみのアイコン。
 ```
 <!-- トグルボタン -->
 <button class="navbar-toggler"
@@ -344,28 +368,29 @@ navbar-brand
 </button>
 ```
 
-トグルとは
-→同じ操作を繰り返すことで機能や状態のON/OFFを切り替える仕組み
+## divタグにて
 
-<button>にて
+### collapse .navbar-collapse
+→折りたたみ(collapse)できるようになる。
 
-navbar-toggler
-→折りたたみや、ナビゲーションのトグル動作に必要
-data-bs-toggle="collapse"とdata-bs-target
-→折りたたみの制御を自動的に割り当てる
-data-bs-targetには折りたたみ対象の名前(CSSセレクタ)を指定する　
-area-controls
-→スクリーンリーダー(読み上げブラウザ)に、コントロールする用を(関連づけ)を伝える
-aria-expanded
-→スクリーンリーダーに開閉状態を伝える
-aria-label
-→スクリーンリーダーにラベル(文字列)を伝える
-aria-*属性はハンディキャップを持つ人に、利用情報を伝えるための属性
+## ulタグ にて
 
-<span>にて
-navbar-toggler-icon
-→折りたたみのアイコン
+### navbar-nav
+→ナビゲーションバーのクラス(ドロップダウンのサポートを含める)。
 
+### ms-auto
+→左に余白(マージン)を自動でつける。
+
+## liタグ, aタグにて
+
+### nav-item nav-link
+→ナビゲーションバーのアイテムと、リンクを定義。
+
+### active
+→アクティブな状態を示す(対象のテキストが強調される)。
+
+### aria-current
+→スクリーンリーダーに、カレント(現在位置)を伝える。
 ```
 <!-- リンク一覧 -->
       <div class="collapse navbar-collapse" id="navbarNav">
@@ -394,57 +419,44 @@ navbar-toggler-icon
       </div>
 ```
 
-<div>にて
-collapse .navbar-collapse
-→折りたたみ(collapse)できるようになる
-
-<ul>にて
-navbar-nav
-→ナビゲーションバーのクラス(ドロップダウンのサポートを含める)
-ms-auto
-→左に余白(マージン)を自動でつける
-
-<li>, <a>にて
-nav-item nav-link
-→ナビゲーションバーのアイテムと、リンクを定義
-active
-→アクティブな状態を示す(対象のテキストが強調される)
-aria-current
-→スクリーンリーダーに、カレント(現在位置)を伝える
-
-
+### padding
+→３つ指定した場合は「上、左右、下」の余白を指定
 ```
 <section 省略　style="padding: 80px 0 50px">
 ```
 
-paddingで３つ指定した場合は「上、左右、下」の余白を指定
+### g-*
+→ガターをつける。
 
+### ガター
+→カラムの余白のこと、ガターがないと小さい画面の時などにカラムが詰まって表示される。
+
+ガターは上下(gy-*)左右(gx-*)の指定できる。
 ```
 <div class="row align-itams-center g-4">
 ```
 
-g-*
-→ガターをつける
-ガター
-→カラムの余白のこと、ガターがないと小さい画面の時などにカラムが詰まって表示される
-ガターは上下(gy-*)左右(gx-*)の指定できる
+### shadow
+→対象に影をつける。
 
+影を小さくしたい場合は .shadow-sm を使う。
+
+影を大きくしたい場合は .shadow-lg を使う。
 ```
 <a href="#contactUs" class="btn btn-dark px-5 shadow">
 ```
 
-shadow
-→対象に影をつける
-影を小さくしたい場合は .shadow-sm を使う
-影を大きくしたい場合は .shadow-lg を使う
-
+### img-fluid
+→画面をレスポンシブデザインにする。
 ```
 <img src="#" class="img-fluid" alt="#">
 ```
 
-img-fluid
-→画面をレスポンシブデザインにする
+### text-muted
+→テキストをグレー(落ち着いた色)にする。
 
+### roumded-pill
+→角を丸める。
 ```
 <!-- カード風 -->
 <div class="border p-3 shadow">
@@ -460,21 +472,27 @@ img-fluid
 </div>
 ```
 
-text-muted
-→テキストをグレー(落ち着いた色)にする
-roumded-pill
-→角を丸める
+### row-cols-*
+→行ごとに表示する列の数を設定。
 
+### row-cols-md-4
+→md(768px以上)の場合は４列でそれ以外は１列にする。
 ```
 <!-- 行の設定 -->
 <div class="row row-cols-l row-cols-md-4">
 ```
 
-row-cols-*
-→行ごとに表示する列の数を設定
-row-cols-md-4
-→md(768px以上)の場合は４列でそれ以外は１列にする
+### card
+→カードを表示する。
 
+### card-body
+→カードの本体(中身)を定義する。
+
+### card-title
+→カードのタイトル。
+
+### card-text
+→カードのテキスト。
 ```
 <!-- カード -->
 <div class="card text-white bg-primary mb-3 shadow">
@@ -485,15 +503,7 @@ row-cols-md-4
 </div>
 ```
 
-card
-→カードを表示する
-card-body
-→カードの本体(中身)を定義する
-card-title
-→カードのタイトル
-card-text
-→カードのテキスト
-
+### カードの高さを揃えたい時は .h-100 を使う
 ```
 <!-- カード -->
 <div class="card shadow h-100">
@@ -505,9 +515,14 @@ card-text
 </div>
 ```
 
-カードの高さを揃えたい時は .h-100 を使う
 
+### card-header
+→カードのヘッダーを表示。
 
+### fw-normal
+→フォントの大きさを標準の大きさにする。
+
+cssの「font-weight: 400」と同じ効果。
 ```
 <div class="card shadow-sm h-100">
   <div class="card-header">
@@ -516,12 +531,13 @@ card-text
 </div>
 ```
 
-card-header
-→カードのヘッダーを表示
-fw-normal
-→フォントの大きさを標準の大きさにする
-　cssの「font-weight: 400」と同じ効果
+### list-group
+→リストグループを表示する。
 
+各アイテムには.list-group-itemを使用する。
+
+### list-group-flush
+→枠線を除外する。
 ```
 <div class="card-body">
   <h1 class="card-title text-danger">0円</h1>
@@ -532,13 +548,11 @@ fw-normal
 </div>
 ```
 
-list-group
-→リストグループを表示する、
-各アイテムには.list-group-itemを使用する
-list-group-flush
-→枠線を除外する
+### card-footer
+→カードのフッターを表示する。
 
-
+### w-100
+→幅を100％にする。
 ```
 <div class="card-footer">
   <a href="#" class="w-100 btn btn-outline-danger">
@@ -547,28 +561,26 @@ list-group-flush
 </div>
 ```
 
-card-footer
-→カードのフッターを表示する
-w-100
-→幅を100％にする
+### hstack
+→水平レイアウト(横方向)にする。
 
+孫要素は、hstackの影響を受けない。
 ```
 <!-- 横方向で配置 -->
 <div class="hstack mb-3">
   <i class="bi bi-envelope-fill text-danger fs-3"></i>
   <div class="ms-3">
-    <!-- 孫要素は、.hstackの影響を受けません（横に並ばない） -->
+    <!-- 孫要素は、.hstackの影響を受けない（横に並ばない） -->
     <h5 class="mb-1">Eメール</h5>
     <span class="text-muted">info@example.com</span>
   </div>
 </div>
 ```
 
-アイコンとEメールを.hstackを使って平行にした
+### form-control
+→スタイルやサイズを(Bootstrap用に)調整する。
 
-hstack
-→水平レイアウト(横方向)にする
-孫要素は、.hstackの影響を受けない
+inputタグやtextareaタグなどの入力項目に設定する。
 
 ```
 <!-- フォーム -->
@@ -578,18 +590,14 @@ hstack
   </div>
 ```
 
-form-control
-→スタイルやサイズを(Bootstrap用に)調整する
-　<input>や<textarea>などの入力項目に設定する
-
+### スクロールスパイ
+→ページをスクロールした時にナビゲーションバーが一緒に切り替わる機能。
 ```
 <body class="h-100 vstack"
   data-bs-spy="scroll" data-bs-target="#navbar">
 ```
 
-スクロールスパイ
-→ページをスクロールした時にナビゲーションバーが一緒に切り替わる異能
-スパイしたい要素をIDまたはクラス指定で対象を指定する
+### スパイしたい要素をIDまたはクラス指定で対象を指定する。
 ```
 data-bs-target="#navbear" (IDで指定)
 data-bs-target=".navbear" (クラスで指定)
