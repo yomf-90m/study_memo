@@ -52,3 +52,18 @@ SELECT * FROM 家計簿 WHERE メモ LIKE '%100%'
 [例] ESCAPE句を使用
 SELECT * FROM 家計簿 WHERE メモ LIKE '%100$%' ESCAPE '$'
 ```
+
+### BETWEEN演算子
+
+→ある範囲内に値が収まっているかを判定。
+
+値1以上かつ値2以下の場合と、データがちょうど値1や値2の場合も真になる。
+```
+式 BETWEEN 値1 AND 値2
+```
+```
+[例] 出金額が100以上3000以下の行を取得
+SELECT *
+FROM 家計簿
+WHERE 出金額 BETWEEN 100 AND 3000
+```
