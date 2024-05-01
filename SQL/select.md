@@ -18,3 +18,14 @@ SELECT 出金額
 [例] * を使用した場合
 SELECT *
   FROM 家計簿
+```
+
+## SELECT文にだけ可能な修飾
+
+### DISTINCT(ディスティンクト)
+
+→検索結果から重複行を除外する。
+```
+SELECT DISTINCT 列名 ...
+FROM テーブル名
+```
