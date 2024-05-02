@@ -29,3 +29,21 @@ SELECT *
 SELECT DISTINCT 列名 ...
 FROM テーブル名
 ```
+
+### OREDER BY
+
+→検索結果の順序を並び替える。
+
+昇順はASC、降順はDESC。
+
+並び順を省略するとASCで並び替えられる。
+```
+SELECT 列名 FROM テーブル名
+ORDER BY 列名 並び順
+```
+```
+[例] 複数の列で並び替え
+//入金額を降順で並べ替え、入金額が等しい行は出金額の降順で並び替える
+SELECT * FROM 家計簿
+ORDER BY 入金額 DESC, 出金額 DESC
+```
