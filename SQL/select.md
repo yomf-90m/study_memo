@@ -47,3 +47,29 @@ ORDER BY 列名 並び順
 SELECT * FROM 家計簿
 ORDER BY 入金額 DESC, 出金額 DESC
 ```
+
+### OFFSET - FETCH
+
+→検索結果から件数を限定して取得する。
+
+検索結果の全行ではなく、並べ替えた結果の一部だけを取得したい場合に使用される。
+```
+SELECT 列名 FROM テーブル名
+ORDER BY 列名
+OFFSET 先頭から除外する行数 ROWS
+FETCH NEXT 取得行数 ROWS ONLY
+```
+```
+[例] 出金額の高い順に３件を取得
+SELECT 費目, 出金額 FROM 家計簿
+ORDER BY 出金額 DESC
+OFFSET 0 ROWS
+FETCH NEXT 3 ROWS ONLY
+```
+```
+[例] ３番目に高い出金額だけを取得
+SELECT 費目, 出金額 FROM 家計簿
+ORDER BY 出金額 DESC
+OFFSET 2 ROWS
+FETCH NEXT 1 ROWS ONLY
+```
