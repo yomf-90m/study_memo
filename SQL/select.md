@@ -124,3 +124,9 @@ SELECT 費目 FROM 家計簿
 EXCEPT
 SELECT 費目 FROM 家計簿アーカイブ
 ```
+
+### INTERSECT(インターセクト)
+
+→積集合。
+
+検索結果と他の検索結果で重複するもの。
