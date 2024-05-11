@@ -130,3 +130,14 @@ SELECT 費目 FROM 家計簿アーカイブ
 →積集合。
 
 検索結果と他の検索結果で重複するもの。
+```
+SELECT 1文
+INTERSECT (ALL)
+SELECT 2文
+```
+```
+[例] 家計簿テーブルと家計簿アーカイブテーブルの積集合
+SELECT 費目 FROM 家計簿
+INTERSECT  //MySQLでは非対応
+SELECT 費目 FROM 家計簿アーカイブ
+```
