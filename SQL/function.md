@@ -25,3 +25,8 @@ FROM 家計簿
 ### LENGTH / LEN
 
 →文字列の長さを表す関数。SQL ServerではLEN関数を利用する。
+```
+[例] 10文字(10バイト)以下のメモだけを取得する
+SELECT メモ, LENGTH(メモ) AS メモの長さ FROM 家計簿
+WHERE LENGTH(メモ) <= 10
+```
