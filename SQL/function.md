@@ -70,3 +70,7 @@ SUBSTR(文字列を表す列, 抽出を開始する位置, 抽出する文字の
 SELECT * FROM 家計簿
 WHERE SUBSTRING(費目, 1, 3) LIKE '%費%'
 ```
+
+### CONCAT
+
+→文字列を連結する関数。
