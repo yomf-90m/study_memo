@@ -77,3 +77,7 @@ WHERE SUBSTRING(費目, 1, 3) LIKE '%費%'
 ```
 CONCAT(文字列, 文字列[, 文字列...])
 ```
+```
+[例] 費目とメモを繋げて抽出する
+SELECT CONCAT(費目, ':' || メモ)　FROM 家計簿
+```
