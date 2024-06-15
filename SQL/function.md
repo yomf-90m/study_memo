@@ -126,3 +126,5 @@ POWER(数値を表す列, 何乗するかを指定する数値)
 
 ### CURRENT_TIMESTAMP
 →現在の日付を得る関数。(年、月、日、時、分、秒)
+
+### CURRENT_DATE
