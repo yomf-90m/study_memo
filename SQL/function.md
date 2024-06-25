@@ -148,3 +148,5 @@ CAST(変換する値 AS 変換する型)
 [例] 出金額列をVARCHAR型に変換して「円」と連結する
 CAST(出金額 AS VARCHAR(20)) + '円'
 ```
+
+### COALESCE(コアレス)
