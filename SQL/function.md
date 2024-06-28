@@ -154,3 +154,7 @@ CAST(出金額 AS VARCHAR(20)) + '円'
 ```
 COALESCE(列や式1, 列や式2, 列や式3 ...)
 ```
+```
+[例]
+SELECT COALESCE('A', 'B', 'C') /* 結果は 'A' */
+```
