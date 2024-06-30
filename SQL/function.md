@@ -158,4 +158,5 @@ COALESCE(列や式1, 列や式2, 列や式3 ...)
 [例]
 SELECT COALESCE('A', 'B', 'C') /* 結果は 'A' */
 SELECT COALESCE(NULL, 'B', 'C') /* 結果は 'B' */
+SELECT COALESCE(NULL, 'B', NULL) /* 結果は 'B' */
 ```
