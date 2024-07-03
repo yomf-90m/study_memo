@@ -161,3 +161,6 @@ SELECT COALESCE(NULL, 'B', 'C') /* 結果は 'B' */
 SELECT COALESCE(NULL, 'B', NULL) /* 結果は 'B' */
 SELECT COALESCE(NULL, NULL, 'C') /* 結果は 'C' */
 ```
+```
+[例]　NULLを明示的に表示する
+```
