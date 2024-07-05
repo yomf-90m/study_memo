@@ -164,4 +164,5 @@ SELECT COALESCE(NULL, NULL, 'C') /* 結果は 'C' */
 ```
 [例]　NULLを明示的に表示する
 SELECT 日付, 費目,
+COALESCE (メモ, '(メモはNULLです)') AS メモ, 入金額, 出金額
 ```
