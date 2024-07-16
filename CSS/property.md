@@ -22,3 +22,12 @@ p {
   width: 50%;
 }
 ```
+```
+[例] 最小値 基本的に50%の幅にしたいけれども、 400pxより縮んで欲しくない場合
+p {
+  background: pink;
+  margin: 0;
+  min-width: 400px;
+  width: 50%;
+}
+```
