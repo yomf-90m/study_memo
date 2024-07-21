@@ -39,4 +39,12 @@ border のあとに top 、 right 、 bottom 、 left といったキーワー�
 
 ```
 [例] 上は破線、下は二重線の境界線
+p {
+  background-color: pink;
+  margin: 0;
+  width: 160px;
+  height: 160px;
+  border-top: 8px dashed blue;
+  border-bottom: 8px double blue;
+}
 ```
