@@ -74,3 +74,6 @@ padding: 16px 8px 4px;
 padding: 16px 8px 4px 2px;
           ↑    →   ↓   ← 
 ```
+
+### margin
+→境界線の外側に余白をつける。
