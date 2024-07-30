@@ -79,4 +79,12 @@ padding: 16px 8px 4px 2px;
 →境界線の外側に余白をつける。
 ```
 [例] 左側にmarginを指定
+p {
+  background: pink;
+  margin: 0 0 0 16px;
+  width: 160px;
+  height: 160px;
+  border: 8px solid blue;
+  padding: 16px;
+}
 ```
