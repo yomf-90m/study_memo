@@ -96,4 +96,13 @@ p {
 2. 下方向の margin だったり、 padding で使うことはできない。
 ```
 [例] 左側の margin に auto キーワードを指定余白が左側に割り振られて、要素が右に寄る
+p {
+  background: pink;
+  margin: 0 0 0 auto;
+  width: 160px;
+  height: 160px;
+  border: 8px solid blue;
+  padding: 16px;
+}
+
 ```
