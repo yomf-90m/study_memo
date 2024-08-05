@@ -104,5 +104,6 @@ p {
   border: 8px solid blue;
   padding: 16px;
 }
-
 ```
+
+### margin: 0 0 0 auto と margin-left: auto の違い
