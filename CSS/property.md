@@ -108,3 +108,4 @@ p {
 
 ### margin: 0 0 0 auto と margin-left: auto の違い
 →margin: 0 0 0 auto; ではすべての margin を指定するため、margin-left 以外の既に設定されている margin の値（margin-top margin-bottom margin-right）が 0 で上書きされる。
+　margin-left: auto; と書いた場合は margin-left の値のみを変更するため，他の値はそのままになる
