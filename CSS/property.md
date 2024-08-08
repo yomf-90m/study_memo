@@ -108,4 +108,9 @@ p {
 
 ### margin: 0 0 0 auto と margin-left: auto の違い
 →margin: 0 0 0 auto; ではすべての margin を指定するため、margin-left 以外の既に設定されている margin の値（margin-top margin-bottom margin-right）が 0 で上書きされる。
-　margin-left: auto; と書いた場合は margin-left の値のみを変更するため，他の値はそのままになる
+
+margin-left: auto; と書いた場合は margin-left の値のみを変更するため，他の値はそのままになる
+
+```
+[例] 左右両方に指定すると余白を均等に左右に割り当てるので、要素が中央に寄る
+```
