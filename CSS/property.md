@@ -113,4 +113,12 @@ margin-left: auto; と書いた場合は margin-left の値のみを変更する
 
 ```
 [例] 左右両方に指定すると余白を均等に左右に割り当てるので、要素が中央に寄る
+p {
+  background: pink;
+  margin: 0 auto;
+  width: 160px;
+  height: 160px;
+  border: 8px solid blue;
+  padding: 16px;
+}
 ```
