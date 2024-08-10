@@ -122,3 +122,5 @@ p {
   padding: 16px;
 }
 ```
+
+### marginの相殺
