@@ -134,3 +134,5 @@ p {
   margin: 16px 0;
 }
 ```
+
+### box-sizing
