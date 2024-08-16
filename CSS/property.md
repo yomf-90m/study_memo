@@ -137,3 +137,5 @@ p {
 
 ### box-sizing
 →値に border-box とすることで、 width や height が border box のサイズを指し示すようになる。
+
+### overflow
