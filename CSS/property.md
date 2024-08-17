@@ -139,3 +139,7 @@ p {
 →値に border-box とすることで、 width や height が border box のサイズを指し示すようになる。
 
 ### overflow
+
+```
+[例1] border: 8px solid blue; padding: 8px;とした場合、その分だけ大きくなってしまう
+```
