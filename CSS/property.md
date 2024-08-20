@@ -148,6 +148,18 @@ p {
   padding: 8px;
 }
 ```
+```
+[例2] box-sizingを使用
+p {
+  background: pink;
+  margin: 16px 0 0;
+  width: 400px;
+  height: 80px;
+  border: 8px solid blue;
+  padding: 8px;
+  box-sizing: border-box;
+}
+```
 
 ### overflow
 →コンテンツが領域からあふれたときに使用する。
