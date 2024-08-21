@@ -172,4 +172,13 @@ p {
   height: 80px;
 }
 ```
-
+```
+[例2] 領域から溢れた分を隠す
+p {
+  background: pink;
+  margin: 0;
+  width: 160px;
+  height: 80px;
+  overflow: hidden;
+}
+```
