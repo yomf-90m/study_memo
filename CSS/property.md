@@ -163,4 +163,13 @@ p {
 
 ### overflow
 →コンテンツが領域からあふれたときに使用する。
+```
+[例1] 「こんにちは。」が領域から溢れる
+p {
+  background: pink;
+  margin: 0;
+  width: 160px;
+  height: 80px;
+}
+```
 
