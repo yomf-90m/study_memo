@@ -182,3 +182,13 @@ p {
   overflow: hidden;
 }
 ```
+```
+[例3] 領域内でスクロールして溢れた分を見る
+p {
+  background: pink;
+  margin: 0;
+  width: 160px;
+  height: 80px;
+  overflow: scroll;
+}
+```
