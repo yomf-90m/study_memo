@@ -192,3 +192,6 @@ p {
   overflow: scroll;
 }
 ```
+
+### box-shadow
+→領域に影をつけるプロパティ。
