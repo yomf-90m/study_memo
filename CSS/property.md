@@ -213,3 +213,13 @@ p {
   box-shadow: 8px 8px gray;
 }
 ```
+```
+[例2] 右下の影をぼかす
+p {
+  background: pink;
+  margin: 16px;
+  width: 160px;
+  height: 160px;
+  box-shadow: 8px 8px 8px gray;
+}
+```
