@@ -223,3 +223,13 @@ p {
   box-shadow: 8px 8px 8px gray;
 }
 ```
+```
+[例3] 全方向にうっすらぼけた影をつける
+p {
+  background: pink;
+  margin: 16px;
+  width: 160px;
+  height: 160px;
+  box-shadow: 0 0 8px gray;
+}
+```
