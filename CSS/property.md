@@ -265,3 +265,21 @@ center・・・領域内の中央にテキストを配置。
 right・・・領域内の右側にテキストを寄せる。
 
 left・・・領域内の左側にテキストを寄せる。
+
+```
+[例]
+h1 {
+  margin: 0;
+  background: skyblue;
+  font-size: 16px;
+  font-weight: normal;
+  text-align: center;
+}
+
+p {
+  margin: 0;
+  background: pink;
+  font-weight: bold;
+  text-align: right;
+}
+```
