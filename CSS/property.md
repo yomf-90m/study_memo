@@ -283,3 +283,7 @@ p {
   text-align: right;
 }
 ```
+
+### line-height
+
+→行間(行ボックス)の高さを制御するプロパティ。
