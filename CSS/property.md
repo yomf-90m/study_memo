@@ -287,5 +287,9 @@ p {
 ### line-height
 
 →行間(行ボックス)の高さを制御するプロパティ。
+
 content box 内にさらに行ボックスが存在しており、
+
 行ボックスはfont-size部分と half leading 部分に分かれる。
+
+line-height は単位なしで指定しておくと、変更に強いコードになる。
