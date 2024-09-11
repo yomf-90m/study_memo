@@ -33,7 +33,9 @@ p {
 
 ### border(境界線)
 →要素の領域の外側に境界線をつける。
+
 デフォルトのボックスモデルでは、 width や height に border は含まれないので、境界線が要素の領域の外側について、境界線分大きくなる。
+
 border のあとに top 、 right 、 bottom 、 left といったキーワードを使えば、方向を決めて指定することもできる。
 
 ```
@@ -50,6 +52,7 @@ p {
 
 ### padding
 →要素の枠線の内側に余白をつける。
+
 上下左右が全て同じ値なら一括指定プロパティを使用する。
 ```
    top: ↑
@@ -293,3 +296,17 @@ content box 内にさらに行ボックスが存在しており、
 行ボックスはfont-size部分と half leading 部分に分かれる。
 
 line-height は単位なしで指定しておくと、変更に強いコードになる。
+
+```
+[例] p要素の行間がゆったりする
+h1 {
+  margin: 0;
+  background: skyblue;
+}
+
+p {
+  margin: 0;
+  background: pink;
+  line-height: 2.0;
+}
+```
