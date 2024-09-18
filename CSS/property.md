@@ -326,3 +326,7 @@ p {
 ```
 [例] a、 img 、 code 、 time 、 spanなど
 ```
+
+**注意点**
+
+- インラインボックスではwidth と heightは指定できない
