@@ -353,3 +353,5 @@ a {
   background: skyblue;
 }
 ```
+
+→border 、 padding 、 margin は有効だが、左右方向については、これらを付けた分、他の要素が右側に押しのけられていく。
