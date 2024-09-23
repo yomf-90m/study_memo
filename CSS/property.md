@@ -365,3 +365,12 @@ a {
   border: 8px solid blue;
 }
 ```
+```
+[例] a要素(インラインブロック)にborderとpaddingとmarginを指定
+a {
+  background: skyblue;
+  border: 8px solid blue;
+  padding: 8px;
+  margin: 8px;
+}
+```
