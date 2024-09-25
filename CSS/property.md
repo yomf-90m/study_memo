@@ -376,3 +376,13 @@ a {
 ```
 
 →インラインボックスは次のボックスが右に来る(左詰め)ので、ブロックボックスのように左右に余白ができないため、auto キーワードは無効になって、左右の margin は 0 になる。
+
+```
+[例] a要素(インラインブロック)にmargin: autoを指定
+a {
+  background: skyblue;
+  border: 8px solid blue;
+  padding: 8px;
+  margin: 0 auto;
+}
+```
