@@ -392,3 +392,16 @@ a {
 →ボックスの配置を切り替えるために使用される。
 
 →ブロックボックスにしたの2つ目のa要素が下に配置され、widthとheightとmargin: autoも反映され中央揃えになる。
+
+```
+[例] a要素(インラインボックス)をブロックボックスに切り替える
+a {
+  background-color: skyblue;
+  width: 80px;
+  height: 32px;
+  border: 8px solid blue;
+  padding: 8px;
+  margin: 0 auto;
+  display: block;
+}
+```
