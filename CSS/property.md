@@ -411,3 +411,16 @@ a {
 →基本的にはインラインボックスだけれども、ブロックボックスのように幅や高さも設定できるようにする。
 
 インラインブロックの指定をした場合、 margin の auto キーワードは無効になるので、左右の margin は 0 になる。
+
+```
+[例] a要素にinline-blockを使用
+a {
+  background-color: skyblue;
+  width: 80px;
+  height: 32px;
+  border: 8px solid blue;
+  padding: 8px;
+  margin: 0 auto;
+  display: inline-block;
+}
+```
